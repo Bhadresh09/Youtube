@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Downloader</title>
+</head>
+<body>
+    <h1>Video Downloader</h1>
+    <form id="downloadForm">
+        <label for="url">Video URL:</label>
+        <input type="text" id="url" name="url" required>
+        <input type="submit" value="Download">
+    </form>
+    <div id="message"></div>
+
+    <script>
+        document.getElementById('downloadForm').addEventListener('submit', async function(event) {
+            event.preventDefault();
+            const url = document.getElementById('url').value;
+            const messageDiv = document.getElementById('message');
+
+            try {
+                const response = await fetch('/download', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({ url })
+                });
+                
+                if (response.ok) {
+                    const blob = await response.blob();
+                    const link = document.createElement('a');
+                    link.href = window.URL.createObjectURL(blob);
+                    link.download = 'video.mp4'; // You can dynamically set filename
+                    link.click();
+                } else {
+                    const result = await response.json();
+                    messageDiv.textContent = `Error: ${result.error}`;
+                }
+            } catch (error) {
+                messageDiv.textContent = `Error: ${error.message}`;
+            }
+        });
+    </script>
+</body>
+</html>

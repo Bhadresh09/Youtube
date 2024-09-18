@@ -1,0 +1,80 @@
+---
+  0 debug pnpm:scope: 
+    selected: 1
+    workspacePrefix: null
+  1 info pnpm: 
+    message: "A store server is running. All store manipulations are delegated to it."
+    prefix: "/app"
+  2 debug pnpm:package-json: 
+    initial: 
+      name: "video-downloader"
+      version: "1.0.0"
+      description: "A simple video downloader"
+      main: "index.js"
+      scripts: 
+        start: "node index.js"
+      dependencies: 
+        express: "^4.21.0"
+        ytdl-core: "^4.11.5"
+        facebook-video-downloader: "^1.0.2"
+      readme: "# Hello Node!\n\nThis project includes a Node.js server script and a web page that connects to it. The front-end page presents a form the visitor can use to submit a color name, sending the submitted value to the back-end API running on the server. The server returns info to the page that allows it to update the display with the chosen color. 🎨\n\n[Node.js](https://nodejs.org/en/about/) is a popular runtime that lets you run server-side JavaScript. This project uses the [Fastify](https://www.fastify.io/) framework and explores basic templating with [Handlebars](https://handlebarsjs.com/).\n\n_Last updated: 14 August 2023_\n\n## Prerequisites\n\nYou'll get best use out of this project if you're familiar with basic JavaScript. If you've written JavaScript for client-side web pages this is a little different because it uses server-side JS, but the syntax is the same!\n\n## What's in this project?\n\n← `README.md`: That’s this file, where you can tell people what your cool website does and how you built it.\n\n← `public/style.css`: The styling rules for the pages in your site.\n\n← `server.js`: The **Node.js** server script for your new site. The JavaScript defines the endpoints in the site back-end, one to return the homepage and one to update with the submitted color. Each one sends data to a Handlebars template which builds these parameter values into the web page the visitor sees.\n\n← `package.json`: The NPM packages for your project's dependencies.\n\n← `src/`: This folder holds the site template along with some basic data files.\n\n← `src/pages/index.hbs`: This is the main page template for your site. The template receives parameters from the server script, which it includes in the page HTML. The page sends the user submitted color value in the body of a request, or as a query parameter to choose a random color.\n\n← `src/colors.json`: A collection of CSS color names. We use this in the server script to pick a random color, and to match searches against color names.\n\n← `src/seo.json`: When you're ready to share your new site or add a custom domain, change SEO/meta settings in here.\n\n## Try this next 🏗️\n\nTake a look in `TODO.md` for next steps you can try out in your new site!\n\n___Want a minimal version of this project to build your own Node.js app? Check out [Blank Node](https://glitch.com/edit/#!/remix/glitch-blank-node)!___\n\n![Glitch](https://cdn.glitch.com/a9975ea6-8949-4bab-addb-8a95021dc2da%2FLogo_Color.svg?v=1602781328576)\n\n## You built this with Glitch!\n\n[Glitch](https://glitch.com) is a friendly community where millions of people come together to build web apps and websites.\n\n- Need more help? [Check out our Help Center](https://help.glitch.com/) for answers to any common questions.\n- Ready to make it official? [Become a paid Glitch member](https://glitch.com/pricing) to boost your app with private sharing, more storage and memory, domains and more.\n"
+      readmeFilename: "README.md"
+      gitHead: "27574c910db925ca65efa5e3924fc9b862081847"
+      _id: "video-downloader@1.0.0"
+    prefix: "/app"
+  3 debug pnpm:stage: 
+    prefix: "/app"
+    stage: "resolution_started"
+  4 debug pnpm:progress: 
+    packageId: "registry.npmjs.org/express/4.21.0"
+    requester: "/app"
+    status: "resolved"
+  5 warn pnpm:install-check: 
+    message: "Unsupported engine for registry.npmjs.org/ytdl-core/4.11.5: wanted: {\"node\":\">=12\"} (current: {\"node\":\"v10.24.1\",\"pnpm\":\"2.25.5\"})"
+    prefix: "/app"
+  6 debug pnpm:progress: 
+    packageId: "registry.npmjs.org/ytdl-core/4.11.5"
+    requester: "/app"
+    status: "resolved"
+  7 error pnpm: 
+    message: "No matching version found for facebook-video-downloader@>=1.0.2 <2.0.0"
+    code: "ERR_PNPM_NO_MATCHING_VERSION"
+    packageMeta: 
+      name: "facebook-video-downloader"
+      dist-tags: 
+        latest: "1.0.1"
+      versions: 
+        1.0.0: 
+          name: "facebook-video-downloader"
+          version: "1.0.0"
+          dependencies: 
+            axios: "^0.18.0"
+          dist: 
+            integrity: "sha512-O6k37KIkGyq20QU2DJPAyq+ujSUGQdZDT55YGAt0VDoUIkzf//bu9iGz12Z627uZLJeeMq950lCrXVcygN9acQ=="
+            shasum: "bc753fe42628e1009ac5cbc62a4e60b6ad38628e"
+            tarball: "https://registry.npmjs.org/facebook-video-downloader/-/facebook-video-downloader-1.0.0.tgz"
+            fileCount: 4
+            unpackedSize: 2827
+            npm-signature: "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcHWdgCRA9TVsSAnZWagAAw3IP/1UfOu6/C451qfZrF5mI\nbMv4O1tTNsZQqWFWL8DCL62tW0k8ZW2BckxLQDn6HtkLI9cg70gOsh2alGtM\nvUN9ws+P10ZoMB8haXiecZuTgeR8Qz53xJgsoZYhvMroxN5ZAx92UgFmcIb+\ngCQMpverTIpvEQ3O3wEnq2hfeQS9SAvI6LvOcvPAcYKOEftE5vEf6fCzL9Wr\nLDUPLOsmemihbKjd6GzP9NIs7AGUD9Rc3JkJdZEaXFCo9m8e0YvPAp9uPpMJ\n58I+goW1vzQHd3Jr/81iWck3tTqAV8ipRQ2gabTGwVc/ePITUGljyARy/MHi\ndqZ2ek803ZNgj4j4vnKnMPokCw3CIgEPUNGmAL+lol/axddgK9UEKNVMXBdg\n3cM6U3z/jY9Ugg62mWbJfInU/ruNfmhhIrpIHqz+LD9eGiZ/FTiwgDrCjvxz\nu9y7IeExVIorQFovxA5JVP+MQfiSINkErZFU8ebmxe1sFKAsXmjVB5XLAOG+\npGyOgIzVEIeEi7Hv5ObxSCI/TGWJaIb/LgX7y0I93TjnhAfFWcGOOcajZY+y\nfxHdqtX3U/Pu0NquxlaN+3dmWFxai+TkyiSfqfoWLIvk5+HdTHuggF79XKTa\n57XWqeg1YOEzwnqh7wT8jXWg/NvI6CYKBJSygnCbuKFH3icdriKPxSl0024/\n9OYo\r\n=/R3n\r\n-----END PGP SIGNATURE-----\r\n"
+            signatures: 
+              - 
+                keyid: "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+                sig: "MEUCIBW74CX9G3KcteEQh4tu8wop65+AtPiEGRFJjW3dn3SsAiEAs8UMpRwLvBarH2PBSb+Oz6yL7/uybCzWh9k4c267934="
+        1.0.1: 
+          name: "facebook-video-downloader"
+          version: "1.0.1"
+          dependencies: 
+            axios: "^0.18.0"
+          dist: 
+            integrity: "sha512-xXVChmd5WapdTZtmgIAw4JEdSUATzH6x6lLGjtpqqdB75cxFxlmfeNLn5vUccl2ywWP5UhVQvYpTtj13yKyXNg=="
+            shasum: "724f00bdcedf2f9da6cff7edfbc55639149c3625"
+            tarball: "https://registry.npmjs.org/facebook-video-downloader/-/facebook-video-downloader-1.0.1.tgz"
+            fileCount: 4
+            unpackedSize: 2802
+            npm-signature: "-----BEGIN PGP SIGNATURE-----\r\nVersion: OpenPGP.js v3.0.4\r\nComment: https://openpgpjs.org\r\n\r\nwsFcBAEBCAAQBQJcHWiGCRA9TVsSAnZWagAAJ4YP/RqRAgqves8iB0vLIc/P\npyYRvuiv586qUs1aSvu4F+Im+LnTQi7y4vychDn8bLlKc3fjL1qanduSHWmJ\naXaTg5lENmaTzKF0X7DgV66+R+yulptyJI0SZZ8QgA7bKzqXvvG7tUrfGMTP\npKY6kA3ilFePjW8QH9lufCqFDPtNUelwk+MBhF3uJApKxbNtQX52kx4Yrmvf\n8ut//LYgYO+jdYEAw3PBFdUnm33iiy4+b/K0ZfdF5jywX+gRS4ZlBPPNzyqE\nf5Lk3jQf9nHOn8jiTwQIQvtKGCoWhJp+OMxEK3JtMEwFot3PmmGvIKupd0lq\n4PebwwnKJFGf5ouC+Ce3t67esCjCyYQNr9Hf/HzTR5pgKU4OcWYECbeLg2jY\nVXaN4bOrvMemqiGWtdG1TXobqffNFEMgQsHJ1B4kGtySHxYiY8L1b8JlbKcv\n1JFU8IOr59buyKOfyj6IWuELohVU4vXeYtYSrGpHiCtTmQrHf+WqeRkzxWBZ\nfchZ8fiJLhiXXhV+IE7FygB43UhJoZ7bwFKeP1U+pISJGC6tyNo4jHw3eZN5\nMCPGhULhSRzDMuiGZicrT6Q/NBuHjI1cZfjq4pNfm9DyFAYKHpK5VeELts5Z\nxbWQhGeV1xiXUdIKEFoDjZg08QjfPHLwNyZ9rom63rrwOyFc3R7gJNl0dPjl\nHuix\r\n=mq0s\r\n-----END PGP SIGNATURE-----\r\n"
+            signatures: 
+              - 
+                keyid: "SHA256:jl3bwswu80PjjokCgh0o2w5c2U4LhQAE57gj9cz1kzA"
+                sig: "MEYCIQCVZ4Ejx7OfR18mZM+EMXvDug6J5rhzXrzei3OsvYsyRQIhAKiHeR4Fog6J56ksSj2aXpyCsL3u0f3I6bR6zmxak5BG"
+      modified: "2022-05-02T02:40:54.009Z"
+      cachedAt: 1726659342683

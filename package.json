@@ -1,0 +1,14 @@
+{
+  "name": "video-downloader",
+  "version": "1.0.0",
+  "description": "A simple video downloader",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "express": "^4.21.0",
+    "ytdl-core": "^4.11.5",
+    "facebook-video-downloader": "^1.0.2"
+  }
+}
